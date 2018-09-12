@@ -10,4 +10,8 @@ class facts_test (
     ensure  => file,
     content => $facts_ipaddress,
   }
+  file {'/tmp/ipaddress':
+    ensure  => file,
+    content => $::ipaddress,
+  }
 }

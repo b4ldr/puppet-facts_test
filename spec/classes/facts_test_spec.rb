@@ -26,6 +26,12 @@ describe 'facts_test' do
             content: '172.16.254.254',
           )
         end
+        it do
+          is_expected.to contain_file('/tmp/ipaddress').with(
+            ensure: 'file',
+            content: '172.16.254.254',
+          )
+        end
       end
     end
   end
